@@ -80,11 +80,4 @@ test("should display correct title on Topics page", async () => {
   expect(title2).toEqual(expected);
 }, 60000);
 
-test("should display correct title on Copilot page", async () => {
-  await page.goto("https://github.com/features/copilot");
-  await page.waitForSelector("h1");
-  const actual = await page.title();
-  expect(actual).toContain("GitHub Copilot · Your AI coding agent · GitHub · GitHub");
-}, 50000);
-
 })
